@@ -1,5 +1,4 @@
 
-name = 'moedelo-client'
 group = 'org.modedelo'
 version = '0.0.2'
 
@@ -17,12 +16,12 @@ buildscript {
 
 
 ext {
-    bintrayRepo = name
-    bintrayName = name
+    bintrayRepo = 'moedelo-client'
+    bintrayName = 'moedelo-client'
 
     publishedGroupId = group
-    libraryName = name
-    artifact = name
+    libraryName = 'moedelo-client'
+    artifact = 'moedelo-client'
 
     libraryDescription = 'MoeDelo API client based on Retrofit2 http library'
 
@@ -45,7 +44,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 
 jar {
-    baseName = name
+    baseName = 'moedelo-client'
     version =  version
 }
 
@@ -76,7 +75,7 @@ group = 'org.moedelo'
 uploadArchives {
     repositories.mavenDeployer {
         pom.groupId = group
-        pom.artifactId = name
+        pom.artifactId = 'moedelo-client'
         pom.version = version
     }
 }
