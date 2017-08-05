@@ -119,4 +119,7 @@ public interface AccountingAPI {
 
     @GET("/accounting/api/v1/sales/invoice/common/{id}")
     Call<Invoice> invoice(@Header("md-api-key") String apiKey, @Path("id") Long id);
+
+    @PUT("/accounting/api/v1/sales/invoice/common/{id}")
+    Call<Invoice> saveInvoice(@Header("md-api-key") String apiKey, @Path("id") Long id, CInvoiceParam invoiceModel);
 }

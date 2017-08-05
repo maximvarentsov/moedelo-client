@@ -11,7 +11,7 @@ Maven:
 <dependency>
   <groupId>org.moedelo</groupId>
   <artifactId>moedelo-client</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <type>pom</type>
 </dependency>
 ```
@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.moedelo:moedelo-client:0.0.1'
+    compile 'org.moedelo:moedelo-client:0.0.2'
 }
 ```
 

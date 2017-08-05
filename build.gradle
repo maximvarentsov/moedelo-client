@@ -1,3 +1,10 @@
+
+name = 'moedelo-client'
+group = 'org.modedelo'
+version = '0.0.2'
+
+
+
 buildscript {
     repositories {
         mavenCentral()
@@ -10,19 +17,19 @@ buildscript {
 
 
 ext {
-    bintrayRepo = 'moedelo-client'
-    bintrayName = 'moedelo-client'
+    bintrayRepo = name
+    bintrayName = name
 
-    publishedGroupId = 'org.moedelo'
-    libraryName = 'moedelo-client'
-    artifact = 'moedelo-client'
+    publishedGroupId = group
+    libraryName = name
+    artifact = name
 
     libraryDescription = 'MoeDelo API client based on Retrofit2 http library'
 
     siteUrl = 'https://github.com/syncro/moedelo-client'
     gitUrl = 'https://github.com/syncro/moedelo-client.git'
 
-    libraryVersion = '0.0.1'
+    libraryVersion = version
 
     developerId = 'syncro'
     developerName = 'Aleksey Oblozhko'
@@ -38,8 +45,8 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 
 jar {
-    baseName = 'moedelo-client'
-    version =  '0.0.1'
+    baseName = name
+    version =  version
 }
 
 repositories {
@@ -69,8 +76,8 @@ group = 'org.moedelo'
 uploadArchives {
     repositories.mavenDeployer {
         pom.groupId = group
-        pom.artifactId = 'moedelo-client'
-        pom.version = '0.0.1'
+        pom.artifactId = name
+        pom.version = version
     }
 }
 

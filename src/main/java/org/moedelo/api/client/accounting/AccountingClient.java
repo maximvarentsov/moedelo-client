@@ -16,15 +16,11 @@ import org.moedelo.api.client.accounting.entity.GOData;
 import org.moedelo.api.client.accounting.entity.InvLData;
 import org.moedelo.api.client.accounting.entity.Invoice;
 import org.moedelo.api.client.accounting.entity.RLData;
+import org.moedelo.api.client.accounting.entity.SActParam;
 
 import java.io.IOException;
 
-import retrofit2.Call;
 import retrofit2.Response;
-import retrofit2.http.Body;
-import retrofit2.http.Header;
-import retrofit2.http.Path;
-import retrofit2.http.Query;
 
 
 public interface AccountingClient {
@@ -63,7 +59,7 @@ public interface AccountingClient {
 
     Response<Act> act(Long id) throws IOException;
 
-    Response<Act> saveAct(Long id, CActParam actModel) throws IOException;
+    Response<Act> saveAct(Long id, SActParam actModel) throws IOException;
 
     Response<BillLData> bills() throws IOException;
 
@@ -89,5 +85,5 @@ public interface AccountingClient {
 
     Response<String> deleteInvoice(Long id) throws IOException;
 
-    Response<Invoice> invoice(CInvoiceParam invoiceModel) throws IOException;
+    Response<Invoice> invoice(Long id) throws IOException;
 }
